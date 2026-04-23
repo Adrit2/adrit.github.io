@@ -1,158 +1,205 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Adrit | Computer in Businesses</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tanbir Mokkammel Adrit | Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans&display=swap" rel="stylesheet"/>
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-:root {
-  --bg: #0a0a0f;
-  --bg2: #111118;
-  --bg3: #1a1a24;
-  --surface: #1e1e2e;
-  --border: rgba(255,255,255,0.08);
-  --text: #e8f6ff;
-  --text-muted: #8aaec2;
-
-  /* SKY BLUE THEME */
-  --accent: #38bdf8;       /* main sky blue */
-  --accent2: #7dd3fc;      /* light sky blue */
-  --accent3: #0ea5e9;      /* deeper sky blue */
-  --glow: rgba(56,189,248,0.35);
-
-  --radius: 16px;
-  --transition: 0.3s ease;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
-/* light theme */
-[data-theme="light"] {
-  --bg: #f0f9ff;
-  --bg2: #e0f2fe;
-  --bg3: #bae6fd;
-  --surface: #ffffff;
-  --border: rgba(0,0,0,0.08);
-  --text: #0c4a6e;
-  --text-muted: #0369a1;
-  --glow: rgba(56,189,248,0.2);
+html {
+  scroll-behavior: smooth;
 }
 
-/* reset */
-*{margin:0;padding:0;box-sizing:border-box}
-body{
-  font-family:'DM Sans',sans-serif;
-  background:var(--bg);
-  color:var(--text);
-  line-height:1.6;
+body {
+  background: linear-gradient(135deg, #4facfe, #00c6ff);
+  color: #333;
 }
 
-/* navbar */
-nav{
-  position:fixed;top:0;width:100%;
-  padding:1rem 2rem;
-  display:flex;justify-content:space-between;
-  backdrop-filter:blur(10px);
-}
-.nav-logo{font-family:'Syne';font-weight:800}
-.nav-logo span{color:var(--accent)}
-
-/* hero */
-#hero{
-  min-height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-}
-.hero-title{
-  font-size:clamp(3rem,7vw,5rem);
-}
-.accent{color:var(--accent)}
-
-/* buttons */
-.btn{
-  padding:0.8rem 1.8rem;
-  border-radius:50px;
-  border:none;
-  cursor:pointer;
-  margin:0.5rem;
-}
-.btn-primary{
-  background:var(--accent);
-  color:#fff;
-  box-shadow:0 0 30px var(--glow);
-}
-.btn-outline{
-  border:1px solid var(--accent);
-  color:var(--accent);
-  background:transparent;
+/* NAVBAR */
+nav {
+  position: fixed;
+  width: 100%;
+  background: rgba(0,0,0,0.7);
+  padding: 15px;
+  text-align: center;
+  z-index: 1000;
 }
 
-/* cards */
-.project-card{
-  background:var(--surface);
-  padding:1.5rem;
-  border-radius:var(--radius);
-  border:1px solid var(--border);
-  transition:0.3s;
-}
-.project-card:hover{
-  transform:translateY(-5px);
-  border-color:var(--accent);
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
 }
 
-/* simple layout */
-.container{
-  max-width:1000px;
-  margin:auto;
-  padding:2rem;
+nav a:hover {
+  color: #00c6ff;
 }
 
-section{padding:5rem 0}
+/* HERO */
+header {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
 
-/* footer */
-footer{
-  text-align:center;
-  padding:2rem;
-  border-top:1px solid var(--border);
+header h1 {
+  font-size: 50px;
+  animation: fadeDown 1s ease;
+}
+
+header p {
+  font-size: 20px;
+  margin-top: 10px;
+  opacity: 0.9;
+}
+
+/* SECTIONS */
+section {
+  width: 85%;
+  margin: 60px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  transform: translateY(40px);
+  opacity: 0;
+  transition: 0.6s;
+}
+
+section.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+h2 {
+  color: #007acc;
+  margin-bottom: 15px;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+/* CARD STYLE */
+.card {
+  padding: 15px;
+  border-left: 5px solid #00c6ff;
+  margin-top: 10px;
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  color: white;
+}
+
+/* ANIMATIONS */
+@keyframes fadeDown {
+  from {
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 </style>
 </head>
 
 <body>
 
+<!-- NAVBAR -->
 <nav>
-  <div class="nav-logo">A<span>.</span></div>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#contact">Contact</a>
 </nav>
 
-<section id="hero">
-  <div>
-    <h1 class="hero-title">
-      Hi, I'm <span class="accent">Adrit</span>
-    </h1>
-    <p>Computer in Businesses</p>
-    <br>
-    <button class="btn btn-primary">View Work</button>
-    <button class="btn btn-outline">Contact</button>
+<!-- HERO -->
+<header>
+  <h1>Tanbir Mokkammel Adrit</h1>
+  <p>Marketing Student | Future Business Professional</p>
+</header>
+
+<!-- ABOUT -->
+<section id="about">
+  <h2>About Me</h2>
+  <p>
+    I am Tanbir Mokkammel Adrit, an international student studying BBA in Marketing at Pacific States University. 
+    I am passionate about branding, business growth, and building a successful career in the United States.
+  </p>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="card">Digital Marketing</div>
+  <div class="card">Communication Skills</div>
+  <div class="card">Microsoft Office</div>
+  <div class="card">HTML & CSS</div>
+  <div class="card">Leadership & Teamwork</div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="card">
+    <strong>Personal Portfolio Website</strong><br>
+    Designed and developed a responsive personal website using HTML, CSS, and GitHub Pages.
+  </div>
+
+  <div class="card">
+    <strong>Marketing Case Study</strong><br>
+    Analyzed branding strategies and consumer behavior in global markets.
   </div>
 </section>
 
-<section>
-  <div class="container">
-    <h2 class="accent">Projects</h2>
-    <br>
-    <div class="project-card">
-      <h3>Inventory Intelligence</h3>
-      <p>Smart system using predictive analytics.</p>
-    </div>
-  </div>
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: yourname@psu.edu</p>
+  <p>LinkedIn: Add your link here</p>
 </section>
 
+<!-- FOOTER -->
 <footer>
-  © 2025 Adrit — Sky Blue Theme
+  © 2026 Tanbir Mokkammel Adrit
 </footer>
+
+<!-- JAVASCRIPT -->
+<script>
+const sections = document.querySelectorAll("section");
+
+window.addEventListener("scroll", () => {
+  sections.forEach(sec => {
+    const top = sec.getBoundingClientRect().top;
+    if (top < window.innerHeight - 100) {
+      sec.classList.add("show");
+    }
+  });
+});
+</script>
 
 </body>
 </html>
